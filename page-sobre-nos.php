@@ -165,6 +165,7 @@
                   <caption class="about-numbers__subtitle subtitle subtitle--big">Registro de acolhimentos nos últimos 10 anos</caption>
                   <thead>
                     <th>ANO</th>
+                    <th>2024</th>
                     <th>2023</th>
                     <th>2022</th>
                     <th>2021</th>
@@ -180,6 +181,12 @@
                   <tbody>
                     <tr class="about-numbers__table--row">
                       <td class="about-numbers__table--data description">Número de beneficiados</td>
+                      <td class="about-numbers__table--data description">
+                        <?php
+                        $benefits_current_year = get_field('about_numbers_banefits_currentYear'); // Recupera o valor da ACF
+                        echo $benefits_current_year; // Exibe o valor
+                        ?>
+                      </td>
                       <td class="about-numbers__table--data description">597</td>
                       <td class="about-numbers__table--data description">496</td>
                       <td class="about-numbers__table--data description">500</td>
@@ -190,36 +197,49 @@
                       <td class="about-numbers__table--data description">808</td>
                       <td class="about-numbers__table--data description">827</td>
                       <td class="about-numbers__table--data description">910</td>
-                      <td class="about-numbers__table--data description description--bold" style="font-size: 1rem;">5.989</td>
+                      <td class="about-numbers__table--data description">
+                        <?php
+                        // Adiciona o valor dinâmico da primeira coluna ao array
+                        $valores = array($benefits_current_year, 597, 496, 500, 293, 529, 541, 488, 808, 827, 910);
+
+                        // Calculando a soma
+                        $total = array_sum($valores);
+
+                        // Exibindo o total
+                        echo $total;
+                        ?>
+                      </td>
                     </tr>
-                    <tr class="about-numbers__table--row" style="display: none!important">
-                      <td class="about-numbers__table--data description">Diárias</td>
-                      <td class="about-numbers__table--data description">3.204</td>
-                      <td class="about-numbers__table--data description">3.230</td>
-                      <td class="about-numbers__table--data description">4.051</td>
-                      <td class="about-numbers__table--data description">2.426</td>
-                      <td class="about-numbers__table--data description">4.553</td>
-                      <td class="about-numbers__table--data description">1.952</td>
-                      <td class="about-numbers__table--data description">1.397</td>
-                      <td class="about-numbers__table--data description">2.449</td>
-                      <td class="about-numbers__table--data description">2.412</td>
-                      <td class="about-numbers__table--data description">2.061</td>
-                      <td class="about-numbers__table--data description description--bold" style="font-size: 1rem;">27.735</td>
-                    </tr>
-                    <tr class="about-numbers__table--row" style="display: none!important">
-                      <td class="about-numbers__table--data description">Refeições servidas</td>
-                      <td class="about-numbers__table--data description">10.334</td>
-                      <td class="about-numbers__table--data description">12.172</td>
-                      <td class="about-numbers__table--data description">12.668</td>
-                      <td class="about-numbers__table--data description">8456</td>
-                      <td class="about-numbers__table--data description">17.336</td>
-                      <td class="about-numbers__table--data description">7.808</td>
-                      <td class="about-numbers__table--data description">5.588</td>
-                      <td class="about-numbers__table--data description">9.796</td>
-                      <td class="about-numbers__table--data description">9.648</td>
-                      <td class="about-numbers__table--data description">8.244</td>
-                      <td class="about-numbers__table--data description description--bold" style="font-size: 1rem;">102.050</td>
-                    </tr>
+                  </tbody>
+
+                  <tr class="about-numbers__table--row" style="display: none!important">
+                    <td class="about-numbers__table--data description">Diárias</td>
+                    <td class="about-numbers__table--data description">3.204</td>
+                    <td class="about-numbers__table--data description">3.230</td>
+                    <td class="about-numbers__table--data description">4.051</td>
+                    <td class="about-numbers__table--data description">2.426</td>
+                    <td class="about-numbers__table--data description">4.553</td>
+                    <td class="about-numbers__table--data description">1.952</td>
+                    <td class="about-numbers__table--data description">1.397</td>
+                    <td class="about-numbers__table--data description">2.449</td>
+                    <td class="about-numbers__table--data description">2.412</td>
+                    <td class="about-numbers__table--data description">2.061</td>
+                    <td class="about-numbers__table--data description description--bold" style="font-size: 1rem;">27.735</td>
+                  </tr>
+                  <tr class="about-numbers__table--row" style="display: none!important">
+                    <td class="about-numbers__table--data description">Refeições servidas</td>
+                    <td class="about-numbers__table--data description">10.334</td>
+                    <td class="about-numbers__table--data description">12.172</td>
+                    <td class="about-numbers__table--data description">12.668</td>
+                    <td class="about-numbers__table--data description">8456</td>
+                    <td class="about-numbers__table--data description">17.336</td>
+                    <td class="about-numbers__table--data description">7.808</td>
+                    <td class="about-numbers__table--data description">5.588</td>
+                    <td class="about-numbers__table--data description">9.796</td>
+                    <td class="about-numbers__table--data description">9.648</td>
+                    <td class="about-numbers__table--data description">8.244</td>
+                    <td class="about-numbers__table--data description description--bold" style="font-size: 1rem;">102.050</td>
+                  </tr>
                   </tbody>
                 </table>
                 <div class="scroll-arrow"></div>

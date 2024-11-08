@@ -618,6 +618,11 @@ function cmb2_fields_sobre_nos()
     'id' => 'about_mission_description_value',
     'type' => 'textarea',
   ]);
+  $cmb->add_field([
+    'name' => 'Número de beneficiados 2024',
+    'id' => 'about_numbers_banefits_currentYear',
+    'type' => 'text_small',
+  ]);
 
   $cmb->add_field([
     'name' => 'Nossos números (Título principal)',
